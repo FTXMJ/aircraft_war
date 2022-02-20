@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  aircraft_war:
+    image: aircraft_war:latest
+    container_name: aircraft_war
+    ports:
+      - "8090:8090"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/hosts:/etc/hosts
+      - /root/runner/aircraft_war/conf:/aircraft_war/conf
+    restart: always
